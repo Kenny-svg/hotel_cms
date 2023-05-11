@@ -5,7 +5,7 @@ type Props = {
 
 const Btn = ({ name, style }: Props) => {
     return ( 
-        <button style={style} className=" p-2 rounded-md w-60 md:p-3 md:w-40 md:rounded-full">{name}</button>
+        <button style={style} className=" p-2 rounded-md w-100 md:p-3 md:w-40 md:rounded-full">{name}</button>
      );
 }
  
