@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { FaQuoteRight, FaStar } from 'react-icons/fa';
 
 type Slide = {
+  users: any;
+  img: string | undefined;
   title: string;
   description: string;
 };

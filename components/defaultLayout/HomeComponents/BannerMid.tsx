@@ -13,22 +13,22 @@ const BannerMid = () => {
   <div className="absolute inset-0 flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-10 xl:gap-16 items-center justify-center z-20">
     <div className="text-center justify-center items-center mb-4">
       <BiHappyAlt size={50}  className='text-yellow-500 ml-8 mb-3' />
-      {/* <p className="text-white text-5xl font-extrabold">      <CountUp start={0} end={30} duration={2.5} /></p> */}
+      <p className="text-white text-5xl font-extrabold">30</p>
       <p className='font-bold text-yellow-500 mt-3'>+Happy Clients</p>
     </div>
     <div className="text-center justify-center items-center mb-4">
         <IoIosPeople size={50}  className='text-yellow-500 ml-6 mb-3' />
-        {/* <p className="text-white text-5xl font-extrabold"><CountUp start={0} end={600} duration={2.5} /></p> */}
+        <p className="text-white text-5xl font-extrabold">100</p>
         <p className='font-bold text-yellow-500 mt-3'>+Our Staffs</p>
     </div>
     <div className="text-center justify-center items-center mb-4">
         <BsCupHotFill size={50}  className='text-yellow-500 ml-10 mb-3' />
-        {/* <p className="text-white text-5xl font-extrabold"><CountUp start={0} end={1500} duration={2.5} /></p> */}
+        <p className="text-white text-5xl font-extrabold">50</p>
         <p className='font-bold text-yellow-500 mt-3'>+Cup of Coffee</p>
     </div>
     <div className="text-center justify-center items-center mb-4">
         <FaAward size={50}  className='text-yellow-500 ml-6 mb-3' />
-        {/* <p className="text-white text-5xl font-extrabold"><CountUp start={0} end={1500} duration={2.5} /></p> */}
+        <p className="text-white text-5xl font-extrabold">100</p>
         <p className='font-bold text-yellow-500 mt-3'>+Win awards</p>
     </div>
   </div>
