@@ -65,5 +65,30 @@
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
+  .responsive-datepicker .ant-picker-dropdown {
+    width: 100% !important;
+    max-width: none !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+  }
+  .effecttwo:hover .effect {
+    opacity: 0.5;
+  }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .caption {
+      width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      color: #fff;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
  
   

@@ -46,7 +46,7 @@ const Header: React.FC = () => {
   return (
 <nav className={`fixed w-full ${isScrolled ? "bg-white shadow-full" : "bg-transparent"} transition duration-500 ease-in-out z-50`}>
   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex items-center justify-between h-16">
+    <div className="flex items-center justify-between h-20">
       <div className="flex-shrink-0">
         <Link href="/">
           <p className="text-white font-p>ld text-xl">Logo</p>
@@ -112,7 +112,7 @@ const Header: React.FC = () => {
     <Link href="/contact">
       <p className={`${menuOpen ? "text-yellow-500" : ""} ${navLinkClassName} block mb-2 transition-colors duration-300`}>CONTACT</p>
     </Link>
-    <button className={`${menuOpen ? "text-yellow-500" : ""} ${navLinkClassName} block mb-2 transition-colors duration-300`}>BOOK NOW</button>
+    {/* <button className={`${menuOpen ? "text-yellow-500" : ""} ${navLinkClassName} block mb-2 transition-colors duration-300`}>BOOK NOW</button> */}
   </div>
 </div>
 
