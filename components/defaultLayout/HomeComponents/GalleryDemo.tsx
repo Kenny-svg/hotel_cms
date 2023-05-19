@@ -1,6 +1,7 @@
 import { ChevronLeftIcon, ChevronRightIcon, XIcon } from "@heroicons/react/outline";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
+import { useMediaQuery } from "react-responsive";
 
 interface ImageGalleryProps {
   images: { src: string; alt: string }[];
@@ -9,7 +10,7 @@ interface ImageGalleryProps {
 const Responsive = ({ images }: ImageGalleryProps) => {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
   const lastIndex = images.length - 1;
-  const isMobileView = useMediaQuery("(max-width: 480px)");
+  const isMobileView = useMediaQuery({ maxWidth: 480 });
   const isModalOpen = currentIndex !== null;
 
   function handleClick(index: number) {
@@ -63,7 +64,7 @@ const Responsive = ({ images }: ImageGalleryProps) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false, // Hide arrows on mobile view
+          arrows: false
         },
       },
     ],
@@ -86,8 +87,8 @@ const Responsive = ({ images }: ImageGalleryProps) => {
         ))}
       </Slider>
 
-      {/* Modal */}
-      {isModalOpen && (
+{/* Modal */}
+{isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center" onClick={handleClose}>
           <div className="absolute inset-0 bg-gray-800 opacity-75 " />
 
@@ -120,22 +121,5 @@ const Responsive = ({ images }: ImageGalleryProps) => {
     </div>
   );
 };
-
-function useMediaQuery(query: string) {
-  const [matches, setMatches] = useState(window.matchMedia(query).matches);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia(query);
-    const handleMatchChange = (e: MediaQueryListEvent) => {
-      setMatches(e.matches);
-    };
-    mediaQuery.addEventListener("change", handleMatchChange);
-    return () => {
-      mediaQuery.removeEventListener("change", handleMatchChange);
-    };
-  }, [query]);
-
-  return matches;
-}
 
 export default Responsive;
