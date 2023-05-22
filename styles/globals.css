@@ -89,6 +89,9 @@
     outline: none; /* Remove the default focus outline */
     border-color: #D1D5DB; /* New border color when focused */
   }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .caption {
       width: 90%;
