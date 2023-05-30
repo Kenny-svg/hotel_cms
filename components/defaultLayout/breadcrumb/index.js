@@ -12,10 +12,10 @@ const BreadCrumb = (props) => {
   </div>
   <div class="absolute text-white">
     <ul class="flex space-x-2 items-center font-bold">
-    <li><a href="/" class="text-white">Home</a></li>
+    <li><Link href="/" class="text-white">Home</Link></li>
     <FaChevronRight />
 
-      <li><a  class="text-yellow-500">{title}</a></li>
+      <li><Link  class="text-yellow-500">{title}</Link></li>
       {/* <li><a  class="text-white">{parent}</a></li> */}
     </ul>
   </div>

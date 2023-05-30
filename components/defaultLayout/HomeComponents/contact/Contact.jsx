@@ -5,7 +5,7 @@ const ContactUs = () => {
     <>
       <div className="w-10/12 ml-10 md:ml-28 mt-10">
         <h1 className="text-yellow-500 text-2xl md:text-5xl font-extrabold">
-          If you have any questions don't hesitate to contact us.
+          If you have any questions dont hesitate to contact us.
         </h1>
       </div>
       <div className="grid md:grid-cols-3 grid-cols-1 w-10/12 mx-auto mt-10 gap-8 mb-20">
