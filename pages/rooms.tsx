@@ -1,15 +1,20 @@
 import Layout from "@/Layout/Layout";
 import Head from "next/head";
 
-const Room = () => {
+const Room: React.FC = () => {
     return ( 
+        <>
         <Layout>
-            <Head>
+        <Head>
                 <title>Rooms | KandB</title>
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
             </Head>
-            <h1>rooms</h1>
+            <main>
+                <h1>Rooms</h1>
+            </main>
         </Layout>
+
+        </>
      );
 }
  

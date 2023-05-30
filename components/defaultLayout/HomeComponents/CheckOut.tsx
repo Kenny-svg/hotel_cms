@@ -8,6 +8,7 @@ import  Dropdown  from '../HomeComponents/DropDown'
 import RoomType from '../HomeComponents/RoomType'
 import CustomDatePicker from '../HomeComponents/gallery/DatePicker'
 import Btn from '@/components/utils/Btn';
+import Link from 'next/link';
 
 
 
@@ -100,7 +101,9 @@ const CheckOut: React.FC = () => {
     <div className='flex md:justify-normal justify-center md:col-span-1 md:ml-2'>
         <div className='flex justify-center md:justify-start'>
             <div className="container mx-auto p-4">
-            <button className='py-3 rounded-md md:px-8 px-20 bg-yellow-500 text-white mt-4'>Book</button>
+              <Link href='/booking'>
+                <button className='py-3 rounded-md md:px-8 px-20 bg-yellow-500 text-white mt-4'>Book</button>
+              </Link>
         </div>
         </div>
     </div>

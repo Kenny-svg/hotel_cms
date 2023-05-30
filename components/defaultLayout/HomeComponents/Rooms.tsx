@@ -38,7 +38,7 @@ const Rooms: React.FC = () => {
                     <p>{hotel.temp}</p>
                 </div>
                 <div className='mt-3'>
-                    <Link href='/book'>
+                    <Link href='/booking'>
                     <Btn name={name} style={btnStyle1}/>
                     </Link>
                 </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Btn from "../../utils/Btn";
 
 const DiscountBanner = () => {
@@ -19,7 +20,9 @@ const DiscountBanner = () => {
             <h1 className='text-4xl font-bold text-white'>GET DISCOUNT 15-25% OFF ANY ROOM PACKAGE</h1>
             <p className="text-xl text-white mt-5">WHEN YOU PURCHASE ANY PACKAGE & GET NEXT ROOM</p>
             <div className="mt-5">
+                <Link href='/booking'>
                 <Btn name={name} style={btnStyle1} />
+                </Link>
             </div>
         </div>
   </div>

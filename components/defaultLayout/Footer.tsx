@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-800 py-8">
@@ -11,36 +13,42 @@ const Footer = () => {
           </div>
             <div className="grid grid-cols-2">
                 <div>
-                <h3 className="text-white text-lg font-bold mb-4">Links</h3>
+                <h3 className="text-white text-lg font-bold mb-4">Our Rooms</h3>
                 <ul className="text-gray-400">
                 <li className="mb-2">
-                    <a href="#" className="hover:text-white">Home</a>
+                    <Link href="#" className="hover:text-yellow-500 hover:pl-3 hover:transition duration-200">Standard Rooms</Link>
                 </li>
                 <li className="mb-2">
-                    <a href="#" className="hover:text-white">About</a>
+                    <Link href="#" className="hover:text-yellow-500 hover:pl-3 hover:transition duration-200">Executive Rooms</Link>
                 </li>
                 <li className="mb-2">
-                    <a href="#" className="hover:text-white">Services</a>
+                    <Link href="#" className="hover:text-yellow-500 hover:pl-3 hover:transition duration-200">Deluxe Rooms</Link>
                 </li>
                 <li className="mb-2">
-                    <a href="#" className="hover:text-white">Contact</a>
+                    <Link href="#" className="hover:text-yellow-500 hover:pl-3 hover:transition duration-200">Diplomatic Standard Rooms</Link>
+                </li>
+                <li className="mb-2">
+                    <Link href="#" className="hover:text-yellow-500 hover:pl-3 hover:transition duration-200">Classic Rooms</Link>
                 </li>
                 </ul>
             </div>
             <div>
-            <h3 className="text-white text-lg font-bold mb-4">Our Rooms</h3>
+            <h3 className="text-white text-lg font-bold mb-4">Quick Links</h3>
             <ul className="text-gray-400">
               <li className="mb-2">
-                <a href="#" className="hover:text-white">Home</a>
+                <Link href="/aboutus" className="hover:text-yellow-500 hover:pl-3 hover:transition duration-200">About Us</Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="hover:text-white">About</a>
+                <Link href="faq" className="hover:text-yellow-500 hover:pl-3 hover:transition duration-200">FAQ's</Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="hover:text-white">Services</a>
+                <Link href="/terms" className="hover:text-yellow-500 hover:pl-3 hover:transition duration-200">Terms Of Services</Link>
               </li>
               <li className="mb-2">
-                <a href="#" className="hover:text-white">Contact</a>
+                <Link href="/contact" className="hover:text-yellow-500 hover:pl-3 hover:transition duration-200">Privacy Policy</Link>
+              </li>
+              <li className="mb-2">
+                <Link href="/contact" className="hover:text-yellow-500 hover:pl-3 hover:transition duration-200">Our Services</Link>
               </li>
             </ul>
           </div>

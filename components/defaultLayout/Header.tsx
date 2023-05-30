@@ -10,11 +10,6 @@ const accountMenuItems = [
   { key: '3', label: 'Logout' }
 ];
 
-const pagesMenuItems = [
-  { key: '1', label: 'Home' },
-  { key: '2', label: 'About Us' },
-  { key: '3', label: 'Contact Us' }
-]
 
   const dropdownButtonStyle = {
     border: "none", // Remove border
@@ -24,7 +19,7 @@ const pagesMenuItems = [
 
 
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [hovered, setHovered] = useState(false);
 
@@ -91,6 +86,9 @@ const Header: React.FC = () => {
         <Link href="/about">
           <p className={`${navLinkClassName} block md:inline-block mb-2 md:mb-0 `}>ABOUT</p>
         </Link>
+        <Link href="/gallery">
+            <p className={`${menuOpen ? "text-white py-2" : ""} ${navLinkClassName} block mb-2 transition-colors duration-300`}>GALLERY</p>
+        </Link>
         <Dropdown className={`${navLinkClassName} block md:inline-block mb-2 md:mb-0 `}  menu={{ items: accountMenuItems }} placement="bottomLeft" arrow>
           <Button 
                   style={buttonStyle}
@@ -98,17 +96,15 @@ const Header: React.FC = () => {
                   onMouseLeave={handleMouseLeave}
              className={`${navLinkClassName} text-base`}>ACCOUNT</Button>
         </Dropdown>
-        <Dropdown className={`${navLinkClassName} block md:inline-block mb-2 md:mb-0`}  menu={{ items: pagesMenuItems }} placement="bottomLeft" arrow > 
-          <Button 
-             style={buttonStyle}
-             onMouseEnter={handleMouseEnter}
-             onMouseLeave={handleMouseLeave}
-             className={`${navLinkClassName} text-base`}>PAGES</Button>
-        </Dropdown>
+
         <Link href="/contact">
           <p className={`${navLinkClassName} hidden md:block`}>CONTACT</p>
         </Link>
+
+        <Link href='/booking'>
         <button className={`${navLinkClassName} btn-primary font-bold hidden md:block`}>BOOK NOW</button>
+          
+        </Link>
       </div>
     </div>
     {/* Mobile menu */}
@@ -126,6 +122,9 @@ const Header: React.FC = () => {
     <Link href="/about">
       <p className={`${menuOpen ? "text-white py-2" : ""} ${navLinkClassName} block mb-2 transition-colors duration-300`}>ABOUT</p>
     </Link>
+    <Link href="/gallery">
+      <p className={`${menuOpen ? "text-white py-2" : ""} ${navLinkClassName} block mb-2 transition-colors duration-300`}>GALLERY</p>
+    </Link>
     <Dropdown
       className={`${menuOpen ? "text-white transition-colors duration-300 " : ""} ${navLinkClassName} block mb-2 `}
       menu={{ items: accountMenuItems }}
@@ -134,14 +133,7 @@ const Header: React.FC = () => {
     >
       <Button style={buttonStyle} className={`${navLinkClassName} text-base py-2`}>ACCOUNT</Button>
     </Dropdown>
-    <Dropdown
-      className={`${menuOpen ? "text-white py-2" : ""} ${navLinkClassName} block mb-2 transition-colors duration-300`}
-      menu={{ items: pagesMenuItems }}
-      placement="bottomLeft"
-      arrow
-    >
-      <Button style={buttonStyle} className={`${navLinkClassName} text-base py-2`}>PAGES</Button>
-    </Dropdown>
+ 
     <Link href="/contact">
       <p className={`${menuOpen ? "text-white py-2" : ""} ${navLinkClassName} block mb-2 transition-colors duration-300`}>CONTACT</p>
     </Link>

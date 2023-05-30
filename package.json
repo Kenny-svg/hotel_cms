@@ -9,7 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@heroicons/react": "^1.0.6",
+    "@mui/lab": "^5.0.0-alpha.131",
+    "@mui/material": "^5.13.2",
+    "@mui/x-date-pickers": "^6.5.0",
+    "@reduxjs/toolkit": "^1.9.5",
     "@types/node": "20.1.0",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -27,8 +33,10 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-modal": "^3.16.1",
+    "react-redux": "^8.0.5",
     "react-responsive": "^9.0.2",
     "react-slick": "^0.29.0",
+    "redux-persist": "^6.0.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^9.3.0",
     "typescript": "5.0.4"

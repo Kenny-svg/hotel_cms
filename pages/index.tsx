@@ -1,14 +1,17 @@
 import Head from 'next/head';
-import HomeLayout from './layout/Home';
+import HomeLayout from '@/components/defaultLayout/HomeComponents/Home';
 
 const Home = () => {
 
   return (
+
     <>
-      <Head>
+    <Head>
+        <title>Home | KandB</title>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <HomeLayout />
+
     </>
   );
 }

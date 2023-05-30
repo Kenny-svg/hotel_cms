@@ -1,5 +1,5 @@
-import Header from '@/components/defaultLayout/Header'
 import Footer from '@/components/defaultLayout/Footer'
+import Header from '@/components/defaultLayout/Header'
 import React, { ReactNode } from 'react'
 
 type Props = {
@@ -10,7 +10,7 @@ const Layout = ({ children }: Props) => {
   return (
     <div>
       <Header />
-      {children}
+        <main>{children}</main>
       <Footer />
     </div>
   )

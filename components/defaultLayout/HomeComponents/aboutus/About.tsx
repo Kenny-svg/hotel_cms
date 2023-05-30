@@ -1,6 +1,7 @@
 import Btn from "@/components/utils/Btn";
 import { HiFastForward } from "react-icons/hi"
-const About = () => {
+
+const About: React.FC = () => {
     let name: String = "Discover more"
     const btnStyle1 = {
         backgroundColor: "#FCA702",

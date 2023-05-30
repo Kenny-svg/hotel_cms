@@ -35,7 +35,7 @@ SwiperCore.use([Navigation, Autoplay]);
           delay: 5000,
           disableOnInteraction: false,
         }}
-        className="mySwiper"
+        className="mySwiper "
       >
         <SwiperSlide>
           <div className="relative">
@@ -79,7 +79,7 @@ SwiperCore.use([Navigation, Autoplay]);
 
           <div className="caption">
             <h5 className="text-yellow-600 md:text-xl mb-7 text-xl">WELCOME TO OUR KandB</h5>
-            <h1 className="md:text-5xl text-3xl uppercase">you are a gem, you deserve to be here!</h1>
+            <h1 className="md:text-5xl text-3xl uppercase">you are a gem, you deserve to be</h1>
             <h1 className="md:text-5xl md:mt-5 text-3xl uppercase">feel at home!</h1>
             <p className="md:mt-5 mt-3 text-xs">The KandB Hotel is a modern, elegant hotel, perfect for a romantic, charming vacation in the city of Lagos.</p>
             <div className="flex gap-4 mt-20">
