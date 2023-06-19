@@ -18,6 +18,9 @@ const style = {
   border: '2px solid #EAB308',
   boxShadow: 24,
   p: 4,
+  '@media only screen and (min-device-width: 320px) and (max-device-width: 480px)': {
+    width: 320,
+  },
 };
 
 export default function TransitionsModal({open, handleClose, content, contentTwo}) {

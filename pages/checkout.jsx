@@ -39,38 +39,43 @@ const Checkout = () => {
           title="checkout"
         />
 
-        <div className="border border-yellow-400 shadow-lg w-10/12 mx-auto mt-10 mb-10">
-          <table className="min-w-full bg-white border border-gray-300">
-            <thead>
-              <tr>
-                <th className="py-4 px-6 bg-gray-100 text-left">Check in</th>
-                <th className="py-4 px-6 bg-gray-100 text-left">Check out</th>
-                <th className="py-4 px-6 bg-gray-100 text-left">Person</th>
-                <th className="py-4 px-6 bg-gray-100 text-left">Room</th>
-                <th className="py-4 px-6 bg-gray-100 text-left">Room no</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="py-4 px-6 border-b border-gray-300">
-                  {formattedDate}
-                </td>
-                <td className="py-4 px-6 border-b border-gray-300">
-                  {formattedDateTwo}
-                </td>
-                <td className="py-4 px-6 border-b border-gray-300">
-                  {selectedPerson}
-                </td>
-                <td className="py-4 px-6 border-b border-gray-300">
-                  {selectedRoom}
-                </td>
-                <td className="py-4 px-6 border-b border-gray-300">
-                  {selectedRoomNo}
-                </td>
-              </tr>
-              {/* Add more table rows as needed */}
-            </tbody>
-          </table>
+        <div className="border border-yellow-400 shadow-lg w-3/4 md:w-1/2 mx-auto mt-10 mb-10">
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white border border-gray-300 md:flex-row sm:flex flex-col">
+              <thead className=" md:block">
+                <tr>
+                  <th className="py-4 px-6 bg-gray-100 text-left">Check in</th>
+                  <td className="py-4 px-6 border-b border-gray-300">
+                    {formattedDate}
+                  </td>
+                </tr>
+                <tr>
+                  <th className="py-4 px-6 bg-gray-100 text-left">Check out</th>
+                  <td className="py-4 px-6 border-b border-gray-300">
+                    {formattedDateTwo}
+                  </td>
+                </tr>
+                <tr>
+                  <th className="py-4 px-6 bg-gray-100 text-left">Person</th>
+                  <td className="py-4 px-6 border-b border-gray-300">
+                    {selectedPerson}
+                  </td>
+                </tr>
+                <tr>
+                  <th className="py-4 px-6 bg-gray-100 text-left">Room</th>
+                  <td className="py-4 px-6 border-b border-gray-300">
+                    {selectedRoom}
+                  </td>
+                </tr>
+                <tr>
+                  <th className="py-4 px-6 bg-gray-100 text-left">Room no</th>
+                  <td className="py-4 px-6 border-b border-gray-300">
+                    {selectedRoomNo}
+                  </td>
+                </tr>
+              </thead>
+            </table>
+          </div>
         </div>
       </Layout>
     </>

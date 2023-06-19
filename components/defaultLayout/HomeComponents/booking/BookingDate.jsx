@@ -104,7 +104,7 @@ const BookingDate = () => {
         </div>
         <div className="flex mt-10 mx-auto w-10/12 gap-8">
           <div className="max-w-full mx-auto w-10/12" id="select">
-            <div className="mb-2 block">
+            <div className="mb-2 mt-5 block">
               <Label htmlFor="countries" value="Room Type" />
             </div>
             <Select
@@ -122,7 +122,6 @@ const BookingDate = () => {
                 <option key={item.id}>{item.category}</option>
               ))}
             </Select>
-            {selectedRoom && <p>Selected room: {selectedRoom}</p>}
           </div>
           <div className="max-w-full mx-auto w-10/12" id="select">
             <div className="mb-2 block">
@@ -143,7 +142,6 @@ const BookingDate = () => {
                 <option key={item.id}>{item.room_number}</option>
               ))}
             </Select>
-            {selectedRoomNo && <p>Selected roon num: {selectedRoomNo}</p>}
           </div>
         </div>
 
