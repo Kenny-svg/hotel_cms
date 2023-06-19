@@ -213,7 +213,13 @@ const Header = () => {
               </p>
             </Link>
             <Link href="/wishlist">
-              <p className={`${navLinkClassName} hidden md:block`}>WISHLIST</p>
+              <p
+                className={`${
+                  menuOpen ? "text-white py-2" : ""
+                } ${navLinkClassName} block mb-2 transition-colors duration-300`}
+              >
+                WISHLIST
+              </p>
             </Link>
             <Link href="/booking">
               <button
