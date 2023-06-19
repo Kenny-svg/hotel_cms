@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+kandb: 
+  build: ./kandb
+  container_name: kandb_c
+  ports: 
+    - '3000:3000'
+  stdin_open: true
+  tty: true
