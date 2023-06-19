@@ -65,7 +65,6 @@ const BookingDate = () => {
               className="custom-datepicker"
               //   renderInput={(params: TextFieldProps) => <TextField {...params} />}
             />
-            
 
             <MobileDatePicker
               label="Check Out"
@@ -75,81 +74,74 @@ const BookingDate = () => {
               className="custom-datepicker"
               //   renderInput={(params: TextFieldProps) => <TextField {...params} />}
             />
-             <div className="max-w-full" id="select">
-          <div className=" block">
-            {/* <Label htmlFor="countries" value="No Of Persons" /> */}
+            <div className="max-w-full" id="select">
+              <div className=" block">
+                {/* <Label htmlFor="countries" value="No Of Persons" /> */}
+              </div>
+              <Select
+                id="countries"
+                required
+                style={{
+                  borderRadius: "0.25rem", // Adjust the border radius value as needed
+                  paddingTop: "1.1rem", // Adjust the padding value as needed
+                  paddingBottom: "1.1rem", // Adjust the padding value as needed
+                  border: "1px solid #EAB319", // Replace "yellow" with your preferred color
+                }}
+                onChange={handleSelectChange}
+              >
+                <option>--No of people--</option>
+                <option>1 Person</option>
+                <option>1 Persons</option>
+              </Select>
+              {selectedPerson && <p>Selected Person: {selectedPerson}</p>}
+            </div>
+            <div className="">
+              <div className="" id="select">
+                <Select
+                  id="countries"
+                  required
+                  style={{
+                    borderRadius: "0.25rem", // Adjust the border radius value as needed
+                    paddingTop: "1.1rem", // Adjust the padding value as needed
+                    paddingBottom: "1.1rem", // Adjust the padding value as needed
+                    border: "1px solid #EAB319", // Replace "yellow" with your preferred color
+                  }}
+                  onChange={handleSelectRoom}
+                >
+                  {hotels.map((item) => (
+                    <option key={item.id}>{item.category}</option>
+                  ))}
+                </Select>
+                {selectedRoom && <p>Selected room: {selectedRoom}</p>}
+              </div>
+            </div>
+            <div className="" id="select">
+              <Select
+                id="countries"
+                required
+                style={{
+                  borderRadius: "0.25rem", // Adjust the border radius value as needed
+                  paddingTop: "1.1rem", // Adjust the padding value as needed
+                  paddingBottom: "1.1rem", // Adjust the padding value as needed
+                  border: "1px solid #EAB319", // Replace "yellow" with your preferred color
+                }}
+                onChange={handleSelectRoomNo}
+              >
+                {hotels.map((item) => (
+                  <option key={item.id}>{item.room_number}</option>
+                ))}
+              </Select>
+              {selectedRoomNo && <p>Selected roon num: {selectedRoomNo}</p>}
+            </div>
+            <div className=" w-full">
+              <Link href="/checkout">
+                <button className="bg-yellow-500 w-full font-bold py-2 text-white rounded-md hover:bg-white hover:text-black border hover:border-black duration-300 transition text-sm p-2">
+                  Proceed to checkout
+                </button>
+              </Link>
+            </div>
           </div>
-          <Select
-            id="countries"
-            required
-            style={{
-              borderRadius: "0.25rem", // Adjust the border radius value as needed
-              paddingTop: "1.1rem", // Adjust the padding value as needed
-              paddingBottom: "1.1rem", // Adjust the padding value as needed
-              border: "1px solid #EAB319", // Replace "yellow" with your preferred color
-            }}
-            onChange={handleSelectChange}
-          >
-            <option>--No of people--</option>
-            <option>1 Person</option>
-            <option>1 Persons</option>
-          </Select>
-          {selectedPerson && <p>Selected Person: {selectedPerson}</p>}
-        </div>
-        <div className="">
-          <div className="" id="select">
-         
-            <Select
-              id="countries"
-              required
-              style={{
-                borderRadius: "0.25rem", // Adjust the border radius value as needed
-                paddingTop: "1.1rem", // Adjust the padding value as needed
-                paddingBottom: "1.1rem", // Adjust the padding value as needed
-                border: "1px solid #EAB319", // Replace "yellow" with your preferred color
-              }}
-              onChange={handleSelectRoom}
-            >
-              {hotels.map((item) => (
-                <option>{item.category}</option>
-              ))}
-            </Select>
-            {selectedRoom && <p>Selected room: {selectedRoom}</p>}
-          </div>
-        
-        </div>
-        <div className="" id="select">
-    
-    <Select
-      id="countries"
-      required
-      style={{
-        borderRadius: "0.25rem", // Adjust the border radius value as needed
-        paddingTop: "1.1rem", // Adjust the padding value as needed
-        paddingBottom: "1.1rem", // Adjust the padding value as needed
-        border: "1px solid #EAB319", // Replace "yellow" with your preferred color
-      }}
-      onChange={handleSelectRoomNo}
-    >
-      {hotels.map((item) => (
-        <option>{item.room_number}</option>
-      ))}
-    </Select>
-    {selectedRoomNo && <p>Selected roon num: {selectedRoomNo}</p>}
-  </div>
-  <div className=" w-full">
-          <Link href="/checkout">
-            <button className="bg-yellow-500 w-full font-bold py-2 text-white rounded-md hover:bg-white hover:text-black border hover:border-black duration-300 transition text-sm p-2">
-              Proceed to checkout
-            </button>
-          </Link>
-        </div>
-          </div>
-         
         </LocalizationProvider>
-       
-
-        
       </div>
     </>
   );

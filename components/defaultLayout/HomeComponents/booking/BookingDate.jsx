@@ -119,7 +119,7 @@ const BookingDate = () => {
               onChange={handleSelectRoom}
             >
               {hotels.map((item) => (
-                <option>{item.category}</option>
+                <option key={item.id}>{item.category}</option>
               ))}
             </Select>
             {selectedRoom && <p>Selected room: {selectedRoom}</p>}
@@ -140,7 +140,7 @@ const BookingDate = () => {
               onChange={handleSelectRoomNo}
             >
               {hotels.map((item) => (
-                <option>{item.room_number}</option>
+                <option key={item.id}>{item.room_number}</option>
               ))}
             </Select>
             {selectedRoomNo && <p>Selected roon num: {selectedRoomNo}</p>}
