@@ -156,7 +156,7 @@ const Header = () => {
           <div
             className={`md:hidden ${
               menuOpen ? "block" : "hidden"
-            } bg-black/90 p-5 w-full rounded-lg max-h-[25rem] py-20 mx-auto transition-all duration-300 transform ${
+            } bg-black/90 p-5 w-full rounded-lg max-h-[25.5rem] py-20 mx-auto transition-all duration-300 transform ${
               menuOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
