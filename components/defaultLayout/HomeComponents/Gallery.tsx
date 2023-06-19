@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Responsive from "./GalleryDemo"
 // import ImageGallery from "./gallery/ImageGallery"
 const images = [
@@ -37,6 +38,7 @@ const images = [
 
  const Gallery = () => {
   return (
+    <>
     <div className="container mx-auto py-10">
             <div className="text-center mt-10">
             <h1 className="text-xl font-bold uppercase">GALLERY</h1>
@@ -46,8 +48,18 @@ const images = [
 
       {/* <ImageGallery images={images} /> */}
       <Responsive images={images} />
+
     </div>
+    <div className="flex justify-center">
+          <Link href="/gallery">
+            <button className="bg-yellow-500  font-bold py-2 text-white rounded-md hover:bg-white hover:text-black border hover:border-black duration-300 transition text-sm p-2">
+              See more
+            </button>
+          </Link>
+        </div>
+          </>
   )
 }
+
 
 export default Gallery

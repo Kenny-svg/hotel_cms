@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import {signupUser} from '../../features/slices/authSlice'
 
 const Signup = () => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const dispatch = useDispatch()
+
+  const handleRegister = () => {
+    console.table(name, email, password)
+    dispatch(signupUser({name,email,password}))
+  }
   return (
     <div
       className="flex items-center justify-center h-screen relative"
@@ -16,11 +27,27 @@ const Signup = () => {
         </div>
         <div className="relative z-10 bg-yellow-500 w-full h-[450px] px-28 flex justify-center justify-items-center items-center">
             <div className=' justify-items-center'>
-                <input type='name' placeholder='first name' className='py-2 px-8 rounded-md bg-black text-yellow-500' />
-                <input type='name' placeholder='last name' className='mt-5 py-2 px-8 rounded-md bg-black text-yellow-500 flex justify-center' />
-                <input type='email' placeholder='email address' className='mt-5 py-2 px-8 rounded-md bg-black text-yellow-500 flex justify-center' />
-                <input type='password' placeholder='password' className='mt-5 py-2 px-8 rounded-md bg-black flex justify-center text-yellow-500' /><br />
-                <button className='hover:bg-black hover:text-yellow-500 transition duration-400 py-2 px-8 rounded-md border-2 border-black text-black font-semibold mx-auto flex justify-center mt-5'>Sign up</button><br />
+                <input 
+                  type='name' 
+                  placeholder='first name'
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                   className='py-2 px-8 rounded-md bg-black text-yellow-500'
+
+                   />
+                <input 
+                  type='email' 
+                  placeholder='email address'
+                  onChange={(e) => setEmail(e.target.value)}
+                  value={email}
+                   className='mt-5 py-2 px-8 rounded-md bg-black text-yellow-500 flex justify-center' />
+                <input 
+                  type='password' 
+                  placeholder='password'
+                  onChange={(e) => setPassword(e.target.value)}
+                  value={password}
+                   className='mt-5 py-2 px-8 rounded-md bg-black flex justify-center text-yellow-500' /><br />
+                <button className='hover:bg-black hover:text-yellow-500 transition duration-400 py-2 px-8 rounded-md border-2 border-black text-black font-semibold mx-auto flex justify-center mt-5'  onClick={handleRegister}>Sign up</button><br />
                 <p className='text-center'>Yet to have an account?<span className='font-bold text-black mx-2'>Sign up</span></p>
             </div>
         </div>

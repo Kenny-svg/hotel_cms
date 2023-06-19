@@ -2,83 +2,151 @@
     {
         "id": 0,
         "category": "Standard",
+        "desc": "The smallest of the suites at KandB but by no means the least. The suite has views of both the Atlantic and the city of Lagos, minibar, a lounge for visitors, king sized beds, nespresso machines, Internet protocol TVs, bath tub and separate walk-in shower, complimentary internet and breakfast.",
         "room_number": 101,
         "amount": 10000,
         "beds": "1 beds",
         "bath": "1 baths",
         "temp": "60 M",
-        "isFav": true
+        "isFav": true,
+        "room": " 40.44 M2",
+        "broom": "10.11 M2",
+        "url": "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?w=740&t=st=1685919711~exp=1685920311~hmac=347b7a9d3dccfb056ddeddae3c14e2c5c96645a42bd13160b2ad32159c3f08f1",
+        "size": "Spacious room equipped with working desk",
+        "view": "Panoramic view of Victoria Island",
+        "internet": "High-speed internet connection"
+    
+        
+        
       },
       {
         "id": 1,
         "category": "Standard",
+        "desc": "The smallest of the suites at KandB but by no means the least. The suite has views of both the Atlantic and the city of Lagos, minibar, a lounge for visitors, king sized beds, nespresso machines, Internet protocol TVs, bath tub and separate walk-in shower, complimentary internet and breakfast.",
         "room_number": 102,
         "amount": 10000,
         "beds": "1 beds",
         "bath": "1 baths",
         "temp": "60 M",
-        "isFav": true
+        "isFav": true,
+        "room": " 40.44 M2",
+        "broom": "10.11 M2",
+        "url": "https://img.freepik.com/premium-photo/interior-bedroom-with-wooden-furniture-wooden-floor_33799-9121.jpg?w=740",
+        "size": "Spacious room equipped with working desk",
+        "view": "Panoramic view of Victoria Island",
+        "internet": "High-speed internet connection"
+    
       },
       {
         "id": 2,
         "category": "Classic",
+        "desc": "Offers all the trims of the club suite but with a separate lounge and guest toilet. Rooms have 2 Internet Protocol Tvs, with an automatic climate controlled air conditioning.",
         "room_number": 103,
         "amount": 12000,
         "beds": "1 beds",
         "bath": "1 baths",
         "temp": "85 M",
-        "isFav": true
+        "isFav": false,
+        "room": " 40.44 M2",
+        "broom": "10.31 M2",
+        "url": "https://img.freepik.com/free-photo/3d-rendering-beautiful-luxury-bedroom-suite-hotel-with-tv_105762-2109.jpg?w=740&t=st=1685919830~exp=1685920430~hmac=05cb4330ee8e9eaf55f0ca7e7d88e268f37b31ea881bc205cc5b4fd68a701856",
+        "size": "Spacious room equipped with working desk",
+        "view": "Panoramic view of Victoria Island",
+        "internet": "High-speed internet connection"
+    
       },
       {
         "id": 3,
         "category": "Classic",
+        "desc": "Offers all the trims of the club suite but with a separate lounge and guest toilet. Rooms have 2 Internet Protocol Tvs, with an automatic climate controlled air conditioning.",
         "room_number": 104,
         "amount": 12000,
         "beds": "1 beds",
         "bath": "1 baths",
         "temp": "85 M",
-        "isFav": true
+        "isFav": true,
+        "room": " 40.44 M2",
+        "broom": "10.31 M2",
+        "url": "https://img.freepik.com/premium-photo/luxury-classic-modern-bedroom-suite-hotel_105762-1904.jpg?w=740",
+        "size": "Spacious room equipped with working desk",
+        "view": "Panoramic view of Victoria Island",
+        "internet": "High-speed internet connection"
+    
       },
       {
         "id": 4,
         "category": "Deluxe",
+        "desc": "Offers all the trims of the club suite but with a separate lounge and guest toilet. Rooms have 2 Internet Protocol Tvs, with an automatic climate controlled air conditioning.",
         "room_number": 105,
         "amount": 18000,
         "beds": "1 beds",
         "bath": "1 baths",
         "temp": "90 M",
-        "isFav": true
+        "isFav": true,
+        "room": " 50.44 M2",
+        "broom": "10.52 M2",
+        "url": "https://img.freepik.com/premium-photo/3d-rendering-loft-luxury-living-room-with-shelf-piano_105762-2080.jpg?w=740",
+        "size": "Spacious room equipped with working desk",
+        "view": "Panoramic view of Victoria Island",
+        "internet": "High-speed internet connection"
+    
       },
       {
         "id": 5,
         "category": "Deluxe",
+        "desc": "Offers all the trims of the club suite but with a separate lounge and guest toilet. Rooms have 2 Internet Protocol Tvs, with an automatic climate controlled air conditioning.",
         "room_number": 106,
         "amount": 18000,
         "beds": "1 beds",
         "bath": "1 baths",
         "temp": "90 M",
-        "isFav": true
+        "isFav": true,
+        "room": " 50.44 M2",
+        "broom": "10.52 M2",
+        "url": "https://img.freepik.com/free-photo/modern-luxury-bedroom-suite-bathroom_105762-1791.jpg?w=740&t=st=1685919916~exp=1685920516~hmac=ac6d6284d280cf59fa50694dcd93172c530f93671eb94355e29fa664d0bfa92d",
+        "size": "Spacious room equipped with working desk",
+        "view": "Panoramic view of Victoria Island",
+        "internet": "High-speed internet connection"
+    
       },
       {
         "id": 6,
         "category": "Executive",
+        "desc": "Offers all the trims of the club suite but with a separate lounge and guest toilet. Rooms have 2 Internet Protocol Tvs, with an automatic climate controlled air conditioning",
         "room_number": 107,
         "amount": 20000,
         "beds": "1 beds",
         "bath": "1 baths",
         "temp": "229 M",
-        "isFav": true
+        "isFav": false,
+        "room": " 60.44 M2",
+        "broom": "11.52 M2",
+        "url": "https://img.freepik.com/free-psd/realistic-bright-modern-double-bedroom-with-furniture_176382-449.jpg?w=900&t=st=1685919934~exp=1685920534~hmac=506551c048275d4b421810b1620121c8ca813be4d87ecfca0ceb35f44324571e",
+        "size": "Spacious room equipped with working desk",
+        "view": "Panoramic view of Victoria Island",
+        "internet": "High-speed internet connection"
+    
+        
       },
       {
-        "id": 6,
+        "id": 7,
         "category": "Executive",
-        "room_number": 108,
+        "desc": "Offers all the trims of the club suite but with a separate lounge and guest toilet. Rooms have 2 Internet Protocol Tvs, with an automatic climate controlled air conditioning",
+        "room_number": 107,
         "amount": 20000,
         "beds": "1 beds",
         "bath": "1 baths",
         "temp": "229 M",
-        "isFav": true
+        "isFav": false,
+        "room": " 60.44 M2",
+        "broom": "11.52 M2",
+        "url": "https://as1.ftcdn.net/v2/jpg/05/75/13/02/1000_F_575130290_ZESZAnbC8XlXNNuOMNcy6BejkTLs0YLI.webp",
+        "size": "Spacious room equipped with working desk",
+        "view": "Panoramic view of Victoria Island",
+        "internet": "High-speed internet connection"
+    
       }
 
 
 ]
+

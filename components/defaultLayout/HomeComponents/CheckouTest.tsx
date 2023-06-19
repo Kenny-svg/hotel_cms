@@ -1,32 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DatePicker, Space } from 'antd';
 import type { DatePickerProps, RangePickerProps } from 'antd/es/date-picker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import  Dropdown  from '../HomeComponents/DropDown'
-import RoomType from '../HomeComponents/RoomType'
-import CustomDatePicker from '../HomeComponents/gallery/DatePicker'
+import  Dropdown  from './DropDown'
+import RoomType from './RoomType'
+import CustomDatePicker from './gallery/DatePicker'
 import Btn from '@/components/utils/Btn';
 import Link from 'next/link';
+import { useDispatch, useSelector } from 'react-redux';
+import { Select } from 'flowbite-react';
+import { selectRoom } from '@/features/slices/wishlistSlice';
 
 
+// const [selectedRoom, setSelectedRoom] = useState('');
+const dispatch = useDispatch()
+const hotels = useSelector((state: any) => state.wishlist.hotels)
 
-// const items: MenuProps['items'] = [
-//     {
-//       label:"Person 1",
-//       key: '0',
-//     },
-//     {
-//       label:" Person 2",
-//       key: '1',
-//     },
-//     {
-//       type: 'divider',
-//     },
-   
-//   ];
-
+const handleSelectRoom = (event: any) => {
+  const selectedRoom = event.target.value;
+  dispatch(selectRoom(selectedRoom))
+}
 const onChange = (
   
   value: DatePickerProps['value'] | RangePickerProps['value'],
@@ -82,27 +77,32 @@ const CheckOut: React.FC = () => {
         </div>
     </div>
 
+    <Select
+    id="countries"
+    required
+    style={{
+      borderRadius: "0.25rem", // Adjust the border radius value as needed
+      paddingTop: "1.1rem", // Adjust the padding value as needed
+      paddingBottom: "1.1rem", // Adjust the padding value as needed
+      border: "1px solid #EAB319", // Replace "yellow" with your preferred color
+    }}
+    onChange={handleSelectRoom}
+  >
+    {hotels.map((item:any) => (    
+    <option>{item.category}</option>
+    ))}
+
+  </Select>
+
+  
+  
+
+
     <div className='flex md:justify-normal justify-center md:col-span-1 md:ml-2'>
         <div className='flex justify-center md:justify-start'>
-          
             <div className="container mx-auto p-4">
-          <h1 className="font-bold">Room numbers</h1>
-
-            <input
-              className=" lg:w-36 text-sm text-gray-700 focus:outline-none focus:border-blue-500 w-full md:w-auto border border-custom-blue py-2 px-8 md:px-8 rounded inline-flex items-center"
-              type="number"
-              placeholder="Enter a number"
-            />
-        </div>
-        </div>
-    </div>
-
-
-    <div className='flex md:justify-normal justify-center md:col-span-1 md:ml-2'>
-        <div className='flex justify-center md:justify-start'>
-            <div className="container mx-auto p-4">
-              <Link href='/booking'>
-                <button className='py-3 rounded-md md:px-8 px-20 bg-yellow-500 text-white mt-4'>Book</button>
+              <Link href='/checkout'>
+                <button className='py-3 rounded-md md:px-8 px-20 bg-yellow-500 text-white mt-4'>Checkout</button>
               </Link>
         </div>
         </div>

@@ -39,9 +39,9 @@ const About: React.FC = () => {
                         </li>
                     </ul>
                     </div>
-                    <div className="mt-3">
+                    {/* <div className="mt-3">
                         <Btn name={name} style={btnStyle1}/>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

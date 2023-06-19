@@ -18,7 +18,7 @@ const accountMenuItems = [
 
 
 
-const Header = () => {
+const Header2 = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [hovered, setHovered] = useState(false);
 
@@ -52,7 +52,7 @@ const Header = () => {
 
   const navLinkClassName = isScrolled
     ? "nav-link font-bold text-yellow-500"
-    : "nav-link font-bold text-white";
+    : "nav-link font-bold text-yellow-500";
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -61,7 +61,7 @@ const Header = () => {
   };
 
   return (
-<nav className={`fixed w-full ${isScrolled ? "bg-white shadow-full" : "bg-transparent"} transition duration-500 ease-in-out z-50`}>
+<nav className={`fixed w-full ${isScrolled ? "bg-white shadow-full" : "bg-white"} transition duration-500 ease-in-out z-50`}>
   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex items-center justify-between h-20">
       <div className="flex-shrink-0">
@@ -99,9 +99,6 @@ const Header = () => {
         <Link href="/contact">
           <p className={`${navLinkClassName} hidden md:block`}>CONTACT</p>
         </Link>
-        <Link href="/wishlist">
-          <p className={`${navLinkClassName} hidden md:block`}>WISHLIST</p>
-        </Link>
 
         <Link href='/booking'>
         <button className={`${navLinkClassName} btn-primary font-bold hidden md:block`}>BOOK NOW</button>
@@ -138,9 +135,6 @@ const Header = () => {
     <Link href="/contact">
       <p className={`${menuOpen ? "text-white py-2" : ""} ${navLinkClassName} block mb-2 transition-colors duration-300`}>CONTACT</p>
     </Link>
-    <Link href="/wishlist">
-          <p className={`${navLinkClassName} hidden md:block`}>WISHLIST</p>
-        </Link>
     <Link href='/booking'>
     <button className={`${menuOpen ? "text-white bg-yellow-500 py-2 px-5" : ""} block mb-2 transition-colors duration-300`}>BOOK NOW</button>
     </Link>
@@ -153,4 +147,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header2;

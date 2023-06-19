@@ -1,59 +1,59 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { persistReducer } from "redux-persist";
-import sessionStorage from "redux-persist/lib/storage/session"; 
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-const getSessionStorageData = () => {
-    const storedData = sessionStorage.getItem("authUser");
-    console.log("Stored data:", storedData);
-    try {
-      return storedData ? JSON.parse(storedData) : null;
-    } catch (error) {
-      console.error("Error parsing stored data:", error);
-      return null;
-    }
-  };
 
-export const authSlice = createSlice({
-  name: "auth",
-  initialState: {
-    user: getSessionStorageData() || {
-      name: "",
-      password: "",
-      authUser: false
-    }
-  },
-  reducers: {
-    login(state, action) {
-      const userId = action.payload;
-      const userValidation = /^[A-Za-z]{4,10}$/i.test(userId.name);
-      const passwordValidation = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{4,10}$/i.test(userId.password);
 
-      state.user = userId;
-      if (!userValidation || !passwordValidation) {
-        state.user.authUser = false;
-      } else {
-        state.user.authUser = true;
-      }
+const initialState = {
+    msg: "",
+    user: false,
+    token: "",
+    loading: false,
+    error: ""
+}
+
+export const signupUser = createAsyncThunk('signupuser', async ()=> {
+  const res = await fetch("https://tokendor.p.rapidapi.com/create", {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'X-RapidAPI-Key': '2fe5a320f0mshb4fc21341296e93p143768jsn9979f5afd723',
+      'X-RapidAPI-Host': 'tokendor.p.rapidapi.com'
     },
-    logout(state) {
-      state.user = {
-        name: "",
-        password: "",
-        authUser: false
-      };
+    body: JSON.stringify(body)
+  })
+  return await res.json()
+})
+
+export const signinUser = createAsyncThunk('signinuser', async ()=> {
+  const res = await fetch("http://104.215.249.5:5000/api/login", {
+    method: "post",
+    headers: {
+      "Content-type": "application/json"
+    },
+    body: JSON.stringify(body)
+  })
+  return await res.json()
+})
+
+const authSlice = createSlice({
+    name: "userTwo",
+    initialState,
+    reducers:{},
+    extraReducers:{
+      [signupUser.pending]: (state,action) => {
+        state.loading = true
+      },
+      [signupUser.fulfilled]: (state,{payload:{error, msg}}) => {
+        state.loading = false
+        if(error) {
+          state.error = error
+        } else {
+          state.msg = msg
+        }
+      },
+      [signupUser.rejected]: (state, action) => {
+        state.loading = true
+      }
     }
-  }
-});
+})
 
-// Create a persist config object
-const persistConfig = {
-  key: "root",
-  storage: sessionStorage,
-  whitelist: ["auth"] // Specify the slice(s) you want to persist
-};
-
-// Wrap the authSlice reducer with persistReducer
-const persistedAuthSliceReducer = persistReducer(persistConfig, authSlice.reducer);
-
-export const { login, logout } = authSlice.actions;
-export default persistedAuthSliceReducer;
+export default authSlice.reducer;

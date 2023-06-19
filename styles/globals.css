@@ -87,6 +87,42 @@
   .dropdown:hover .dropdown-menu {
     display: block;
   }
+  .custom-datepicker .MuiInputBase-input {
+    color: #EAB319; /* Replace with your preferred color */
+  }
+  .custom-datepicker label {
+    color: #EAB319
+  }
+  
+  .custom-datepicker .MuiInput-underline:before {
+    border-bottom-color: #EAB319; /* Replace with your preferred color */
+  }
+  
+  .custom-datepicker .MuiInputLabel-root {
+    color: #EAB319; /* Replace with your preferred color */
+  }
+  
+  .custom-datepicker .MuiOutlinedInput-notchedOutline {
+    border-color: #EAB319; /* Replace with your preferred color */
+  }
+  
+  .custom-datepicker .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #EAB319; /* Replace with your preferred color */
+  }
+  
+  .custom-datepicker .MuiIconButton-root {
+    color: #EAB319; /* Replace with your preferred color */
+  }
+  
+  .custom-datepicker .MuiPickersDay-daySelected {
+    background-color: #EAB319; /* Replace with your preferred color */
+    color: #ffffff; /* Replace with your preferred color */
+  }
+  .custom-datepicker .MuiPickersDay-daySelected.MuiPickersDay-day  {
+    background-color: #EAB319; /* Replace with your preferred background color */
+    color: #ffffff; /* Replace with your preferred text color */
+  }
+
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .caption {
       width: 90%;

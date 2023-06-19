@@ -9,7 +9,7 @@ import "swiper/css";
 
 // import required modules
 import Btn from "@/components/utils/Btn";
-import CheckOut from "./CheckOut";
+import BookingDate from "./CheckOutPage";
 
 SwiperCore.use([Navigation, Autoplay]);
 
@@ -89,7 +89,7 @@ SwiperCore.use([Navigation, Autoplay]);
           </div>
         </SwiperSlide>
       </Swiper>
-      <CheckOut />
+      <BookingDate />
     </>
   );
 }

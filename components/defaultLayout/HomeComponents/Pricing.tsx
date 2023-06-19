@@ -39,9 +39,7 @@ const Pricing = () => {
             <span className="font-bold text-gray-700 text-sm">24 Hours Power Supply</span>
           </li>
         </ul>
-        <button className="bg-yellow-500 hover:bg-yellow-500 text-white font-bold py-2 px-4 mt-[50px] rounded-full">
-          Sign Up
-        </button>
+       
         </div>
         
       </div>
@@ -80,9 +78,7 @@ const Pricing = () => {
             <span className="font-bold text-gray-700 text-sm">24 Hours Power Supply</span>
           </li>
         </ul>
-        <button className="bg-custom-blue hover:bg-yellow-500 text-white font-bold py-2 px-4 mt-[70px] rounded-full">
-          Sign Up
-        </button>
+       
         </div>
         
       </div>
@@ -121,9 +117,7 @@ const Pricing = () => {
             <span className="font-bold text-gray-700 text-sm">24 Hours Power Supply</span>
           </li>
         </ul>
-        <button className="bg-yellow-500 hover:bg-yellow-500 text-white font-bold py-2 px-4 mt-8 rounded-full">
-          Sign Up
-        </button>
+       
         </div>
         
       </div>
@@ -165,9 +159,7 @@ const Pricing = () => {
             <span className="font-bold text-gray-700 text-sm">24 Hours Power Supply</span>
           </li>
         </ul>
-        <button className="bg-yellow-500 hover:bg-yellow-500 text-white font-bold py-2 px-4 mt-8 rounded-full">
-          Sign Up
-        </button>
+        
         </div>
         
       </div>
@@ -206,9 +198,7 @@ const Pricing = () => {
             <span className="font-bold text-gray-700 text-sm">24 Hours Power Supply</span>
           </li>
         </ul>
-        <button className="bg-yellow-500 hover:bg-yellow-500 text-white font-bold py-2 px-4 mt-8 rounded-full">
-          Sign Up
-        </button>
+        
         </div>
         
       </div>

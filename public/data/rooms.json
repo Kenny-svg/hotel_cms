@@ -1,0 +1,84 @@
+[
+    {
+        "id": 0,
+        "category": "Standard Rooms",
+        "desription": "The smallest of the suites at KandB but by no means the least. The suite has views of both the Atlantic and the city of Lagos, minibar, a lounge for visitors, king sized beds, nespresso machines, Internet protocol TVs, bath tub and separate walk-in shower, complimentary internet and breakfast.",
+        "amount": 10000,
+        "beds": "1 beds",
+        "bath": "10.11 M2",
+        "temp": "60 M",
+        "isFav": true
+      },
+      {
+        "id": 1,
+        "category": "Standard",
+        "room_number": 102,
+        "amount": 10000,
+        "beds": "1 beds",
+        "bath": "1 baths",
+        "temp": "60 M",
+        "isFav": true
+      },
+      {
+        "id": 2,
+        "category": "Classic",
+        "room_number": 103,
+        "amount": 12000,
+        "beds": "1 beds",
+        "bath": "1 baths",
+        "temp": "85 M",
+        "isFav": false
+      },
+      {
+        "id": 3,
+        "category": "Classic",
+        "room_number": 104,
+        "amount": 12000,
+        "beds": "1 beds",
+        "bath": "1 baths",
+        "temp": "85 M",
+        "isFav": true
+      },
+      {
+        "id": 4,
+        "category": "Deluxe",
+        "room_number": 105,
+        "amount": 18000,
+        "beds": "1 beds",
+        "bath": "1 baths",
+        "temp": "90 M",
+        "isFav": true
+      },
+      {
+        "id": 5,
+        "category": "Deluxe",
+        "room_number": 106,
+        "amount": 18000,
+        "beds": "1 beds",
+        "bath": "1 baths",
+        "temp": "90 M",
+        "isFav": true
+      },
+      {
+        "id": 6,
+        "category": "Executive",
+        "room_number": 107,
+        "amount": 20000,
+        "beds": "1 beds",
+        "bath": "1 baths",
+        "temp": "229 M",
+        "isFav": false
+      },
+      {
+        "id": 7,
+        "category": "Executive",
+        "room_number": 108,
+        "amount": 20000,
+        "beds": "1 beds",
+        "bath": "1 baths",
+        "temp": "229 M",
+        "isFav": true
+      }
+
+
+]

@@ -11,7 +11,7 @@ const BookingPage = () => {
     return ( 
         <>
         
-        {authUser ? <div>
+      
         <Layout>
             <Head>
                     <title>Booking | KandB</title>
@@ -20,7 +20,7 @@ const BookingPage = () => {
         <BreadCrumb url="https://img.freepik.com/free-photo/old-hotel-sign_1101-890.jpg?w=740&t=st=1684850432~exp=1684851032~hmac=3bc518cb3c301103c7942c623f0070c2f77c88772b9cf00757ef7a40edccaf16" parent='booking' title='booking' />
         <Booking />
         </Layout>
-        </div> : <Login />}
+       
 
        
         

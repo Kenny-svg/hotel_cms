@@ -22,8 +22,6 @@ const BreadCrumb = (props) => {
   <img src={url} alt="Background Image" className="w-full h-[320px] object-cover -mt-24" />
 </div>
 
-
-
             
         </>
      );

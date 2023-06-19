@@ -4,24 +4,12 @@ import { login } from '../../features/slices/authSlice';
 import { useRouter } from 'next/router';
 
 const Login = () => {
-  const initialState = {
-    name: '',
-    password: ''
-  };
-  const [values, setValues] = useState(initialState);
 
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    setValues({ ...values, [name]: value });
-  };
-
-  const dispatch = useDispatch();
-  const router = useRouter();
-
-  const handleLogin = () => {
-    dispatch(login(values));
-    router.push('/');
-  };
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("")
+const handleLogin = () => {
+  console.log(email, password)
+}
   return (
     <div
       className="flex items-center justify-center h-screen relative"
@@ -41,15 +29,15 @@ const Login = () => {
                     type='text' 
                     name='name'
                     placeholder='username'
-                    value={values.name}
-                    onChange={onChange} className='py-2 px-8 rounded-md bg-black text-yellow-500' 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)} className='py-2 px-8 rounded-md bg-black text-yellow-500' 
                 />
                 <input 
                     type='password' 
                     placeholder='password'
-                    value={values.password}
+                    value={password}
                     name='password'
-                    onChange={onChange} className='mt-5 py-2 px-8 rounded-md bg-black flex justify-center text-yellow-500' /><br />
+                    onChange={(e) =>setPassword(e.target.value)} className='mt-5 py-2 px-8 rounded-md bg-black flex justify-center text-yellow-500' /><br />
                 <button onClick={handleLogin} className='hover:bg-black hover:text-yellow-500 transition duration-400 py-2 px-8 rounded-md border-2 border-black text-black font-semibold mx-auto flex justify-center mt-5'>Login</button><br />
                 <p className='text-center'>Yet to have an account?<span className='font-bold text-black mx-2'>Sign up</span></p>
             </div>
